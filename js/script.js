@@ -1,3 +1,4 @@
+(function(win, doc, $){
 var chatModule = (function(){
 	var _leadself = 'Me: ',
 			_leadcomputer = "PC: ",
@@ -54,6 +55,8 @@ $(document).ready(function(){
 	chatModule.saySassyStuff();
 });
 
+	if(!win.chatModule) win.chatModule = chatModule;
+})(window, document, jQuery);
 /*
 var o = {
 leadself: 'Me: ',
